@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import useTransactions from '../../hooks/useTransactions';
 import useCurrency from '../../hooks/useCurrency';
@@ -12,15 +12,12 @@ import './Analytics.css';
 const Analytics = () => {
   const { allTransactions, totalIncome, totalExpenses, netBalance } = useTransactions();
   const { rates, selectedCurrency, setSelectedCurrency, loading } = useCurrency();
-  const [currencies, setCurrencies] = useState(['INR', 'USD', 'EUR', 'GBP']);
 
-  useEffect(() => {
-    if (rates) {
-      const available = Object.keys(rates).filter((c) =>
-        ['INR', 'USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD'].includes(c)
-      );
-      setCurrencies(available);
-    }
+  const currencies = useMemo(() => {
+    if (!rates) return ['INR', 'USD', 'EUR', 'GBP'];
+    return Object.keys(rates).filter((c) =>
+      ['INR', 'USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD'].includes(c)
+    );
   }, [rates]);
 
   const recurringExpenses = allTransactions.filter(

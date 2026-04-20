@@ -1,19 +1,11 @@
-import { createContext, useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { loadInitialTransactions, saveTransactions, loadBudget, saveBudget } from '../services/api';
-
-export const FinanceContext = createContext();
+import { FinanceContext } from './financeContextDef';
 
 export const FinanceProvider = ({ children }) => {
-  const [transactions, setTransactions] = useState([]);
-  const [budget, setBudget] = useState({ monthlyBudget: 50000 });
-
-  useEffect(() => {
-    const storedTransactions = loadInitialTransactions();
-    setTransactions(storedTransactions);
-    const storedBudget = loadBudget();
-    setBudget(storedBudget);
-  }, []);
+  const [transactions, setTransactions] = useState(() => loadInitialTransactions());
+  const [budget, setBudget] = useState(() => loadBudget());
 
   useEffect(() => {
     if (transactions.length > 0) {

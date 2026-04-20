@@ -1,5 +1,5 @@
 import { useContext, useMemo } from 'react';
-import { FinanceContext } from '../context/FinanceContext';
+import { FinanceContext } from '../context/financeContextDef';
 
 const useBudget = () => {
   const { budget, updateBudget, transactions } = useContext(FinanceContext);

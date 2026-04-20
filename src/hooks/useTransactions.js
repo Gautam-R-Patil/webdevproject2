@@ -1,5 +1,5 @@
 import { useContext, useMemo } from 'react';
-import { FinanceContext } from '../context/FinanceContext';
+import { FinanceContext } from '../context/financeContextDef';
 import { parseISO, isWithinInterval, startOfDay, endOfDay } from 'date-fns';
 
 const useTransactions = (filters = {}) => {
