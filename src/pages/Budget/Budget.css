@@ -1,0 +1,149 @@
+.budget-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.budget-set-section {
+  margin-bottom: 24px;
+}
+
+.budget-set-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.budget-set-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.budget-display-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.budget-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.budget-edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e3f2fd;
+  color: #2196f3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.budget-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currency-symbol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.budget-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #4fc3f7;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  outline: none;
+  color: #333;
+}
+
+.budget-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.category-breakdown {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.empty-text {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.category-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.category-amount {
+  font-weight: 700;
+  color: #f44336;
+  font-size: 0.95rem;
+}
+
+.category-bar {
+  height: 8px;
+  background: #e8eaf6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.category-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4fc3f7, #2196f3);
+  border-radius: 4px;
+}

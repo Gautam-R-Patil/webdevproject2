@@ -1,0 +1,84 @@
+.budget-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.budget-card-title {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.budget-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.budget-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.stat-value.spent {
+  color: #f44336;
+}
+
+.stat-value.remaining {
+  color: #4caf50;
+}
+
+.stat-value.over {
+  color: #f44336;
+}
+
+.budget-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-progress-bar {
+  flex: 1;
+  height: 12px;
+  background: #e8eaf6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.budget-progress-fill.over {
+  background: linear-gradient(90deg, #ff9800, #f44336);
+}
+
+.budget-percentage {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  min-width: 50px;
+}

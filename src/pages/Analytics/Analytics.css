@@ -1,0 +1,168 @@
+.analytics-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.currency-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.currency-selector label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.currency-selector select {
+  padding: 6px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #fafafa;
+}
+
+.loading-text {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.analytics-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-card.income {
+  border-top: 4px solid #4caf50;
+}
+
+.summary-card.expense {
+  border-top: 4px solid #f44336;
+}
+
+.summary-card.balance {
+  border-top: 4px solid #2196f3;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a2e;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.charts-full {
+  margin-bottom: 24px;
+}
+
+.recurring-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recurring-total {
+  font-size: 0.9rem;
+  color: #f44336;
+  font-weight: 600;
+}
+
+.empty-text {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+.recurring-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recurring-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #fff3e0;
+  border-radius: 10px;
+  border-left: 3px solid #ff9800;
+}
+
+.recurring-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recurring-item-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.recurring-item-category {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.recurring-item-amount {
+  font-weight: 700;
+  color: #f44336;
+}
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
